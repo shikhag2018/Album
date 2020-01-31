@@ -1,0 +1,10 @@
+<h2>Add a Tag:</h2>
+<%= form_for @tag ,url: album_photo_tags_path(@photo.album.id,@photo.id) do |form| %>
+  <p>
+    <%= form.label :Addtags%><br>
+    <%= form.text_field :Addtags  %>
+  </p>
+    <%= form.submit %>
+  </p>
+  <%=link_to 'Back',album_path(@photo.album.id)%>
+<% end %>
