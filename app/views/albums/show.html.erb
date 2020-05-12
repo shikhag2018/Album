@@ -31,7 +31,6 @@
 <%@album.photos.each do |photo|%>
   <%= image_tag photo.image.url(:medium) %>
     <br>
-  <%=photo.image_file_name %>
   <%=link_to 'Delete',album_photo_path(@album.id,photo.id),method: :delete,
               data: { confirm: 'Are you sure?' } %>
   <%=link_to 'Add_Tag',new_album_photo_tag_path(@album.id,photo.id)%><br>

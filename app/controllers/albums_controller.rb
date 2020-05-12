@@ -13,7 +13,7 @@ class AlbumsController < ApplicationController
 
         respond_to do |format|
             if @album.save
-     
+                 
                 if params[:images]
         #===== The magic is here ;)
                     params[:images].each { |image|
@@ -81,4 +81,6 @@ class AlbumsController < ApplicationController
     def album_params
        params.require(:album).permit(:name, :description,:user_id)
     end
+
+    
 end
